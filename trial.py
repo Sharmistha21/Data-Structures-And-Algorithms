@@ -31,3 +31,14 @@ print("add 1 to each element of a:", a+1)
 print("Subtract 2 from each element of b:",b-2)
 print("sum of all array elements:",a.sum())
 print("\narray sum:\n",a+b)
+
+x=np.array([1,2])
+print(x.dtype)
+
+x=np.array([1.0,2.0])
+print(x.dtype)
+
+x=np.array([1,2],dtype=np.int64)
+print(x.dtype)
+
+
