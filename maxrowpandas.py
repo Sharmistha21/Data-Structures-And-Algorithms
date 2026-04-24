@@ -25,3 +25,43 @@ print(df[df.Points==df.Points.max()])
 print(df.Age.max())
 
 print(df[df.Age==df.Age.min()])
+
+data={'Name':['Alice','Bob','Charlie'],'Age':[25,30,45],'Score':[85,90,78]}
+df=pd.DataFrame(data)
+filtered_df=df[df['Age']>28]
+print(filtered_df)
+
+filtered_df=df[df['Age'].isin([25,45])]
+print(filtered_df)
+
+filtered_df=df.query('Age>30 and Score<90')
+print(filtered_df)
+
+data = [['John', 8, 7, 6, 5], ['Paul', 8, 3, 6, 4],
+        ['Juli', 9, 10, 9, 9], ['Geeta', 9, 5, 4, 4]]
+
+# Create the pandas DataFrame
+df = pd.DataFrame(
+    data, columns=['Name', 'Class', 'English', 
+                   'Maths', 'History'])
+
+# print dataframe.
+print(df)
+
+df1=df.loc[(df['English']>6) & (df['Maths']>6)]
+print(df1)
+
+df1=df.loc[((df['English']>6) & (df['Maths']>4)),['Name','Class']]
+print(df1)
+
+dataFrame = pd.DataFrame({'Name': [' RACHEL  ', ' MONICA  ', ' PHOEBE  ',
+                                   '  ROSS    ', 'CHANDLER', ' JOEY    '],
+                          
+                          'Age': [30, 35, 37, 33, 34, 30],
+                          
+                          'Salary': [100000, 93000, 88000, 120000, 94000, 95000],
+                          
+                          'JOB': ['DESIGNER', 'CHEF', 'MASUS', 'PALENTOLOGY',
+                                  'IT', 'ARTIST']})
+
+print(dataFrame.loc[(dataFrame['Salary']>=10000) & (dataFrame['Age']<40) & (dataFrame['JOB'].str.startswith('D')),['Name','JOB']])
