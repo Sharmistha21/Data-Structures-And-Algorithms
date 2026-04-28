@@ -25,4 +25,8 @@ print("\nDrop rows with at least 1 NaN:\n",df[df.notna().all(axis=1)])
 print("\nDrop rows where all values are NaN:\n",df[df.notna().any(axis=1)])
 print("\nDrop columns with at least 1 NaN:\n",df.loc[:,df.notna().all()])
 
+print("\nDrop rows with at least 1 NaN:\n",df.query("A==A and B==B and C==C and D==D"))
+
+
+
 
