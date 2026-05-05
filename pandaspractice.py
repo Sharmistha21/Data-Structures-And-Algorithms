@@ -27,3 +27,4 @@ print(df.tail(2))
 
 print("\nDataFrame summary using info:")
 print(df.info())
+
